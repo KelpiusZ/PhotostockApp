@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.app-header{
+  height: 15rem;
+  padding-top: 3rem;
+  background-color: black;
+  color: aliceblue;
+}
+
+.app-searchBar {
+  height: 5rem;
+  background-color: black;
+}
+
+.app-main{
+  height: 70rem;
+  padding-top: 10rem;
+  background-color: blanchedalmond;
+  color: black;
+}
+
+.app-footer{
+  height: 10rem;
+  padding-top: 7rem;
+  background-color: black;
+  color: aliceblue;
+  margin-bottom: 3rem;
+}
