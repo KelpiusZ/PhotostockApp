@@ -66,7 +66,7 @@ function App() {
     })
     .then(response => response.json())
     .then(response => {
-      console.log(response)
+      // console.log(response)
       setImages(response);
     })
     .catch(console.error);

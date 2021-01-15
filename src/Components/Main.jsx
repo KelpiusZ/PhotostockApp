@@ -15,24 +15,22 @@ const Main = ({ images }) => {
         
         <div className="main">
 
-            <h3>This is the main part of the page</h3>
+            {/* <h3>This is the main part of the page</h3> */}
             {images.photos.map(image =>{
                 
                 return (
                     
                     <div key={image.id}>
-                    <img src={image.src.medium}/>
-                </div>
+                        <img src={image.src.original}/>
+                    </div>
 
-)
+                )   
 
-})}            
+            })}            
             
         </div>
 
-);
-
-
+    );
 
 }
 
