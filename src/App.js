@@ -1,26 +1,28 @@
-
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import SearchBar from './Components/SearchBar'
 import Main from './Components/Main';
-import Footer from './Components/Footer';
+import NavBar from './Components/NavBar';
+import { Route, Switch } from 'react-router-dom';
+import Architecture from './Components/Architecture';
+import Photostock from './images/PhotoStock.png'
 
 
-// const images = [
-//   {
-//     id: 2014422,
-//     url: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg",
-//   },
-//   {
-//     id: 2014422,
-//     url: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg",
-//   },
-//   {
-//     id: 2014422,
-//     url: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg",
-//   }  
-// ];
+const archImages = [
+  {
+    id: 1,
+    url: "https://images.pexels.com/photos/911738/pexels-photo-911738.jpeg",
+  },
+  {
+    id: 2,
+    url: "https://images.pexels.com/photos/1774931/pexels-photo-1774931.jpeg",
+  },
+  {
+    id: 3,
+    url: "https://images.pexels.com/photos/534174/pexels-photo-534174.jpeg",
+  }  
+];
 
 function App() {
 
@@ -32,6 +34,8 @@ function App() {
   };
 
   const [searchString, setSearchString] = useState('people');
+
+  const [action, setAction] = useState('main');
 
   function handleChange(event) {
     setSearchString(event.target.value);
@@ -74,15 +78,32 @@ function App() {
   };
 
 
+ const changeAction = (str) => {
+    setAction(str)
+ }
+
 
 
   return (
 
     <div className="App"> 
 
-      <div className="app-header">
-        <Header/>
+      <div className="new-logo">
+      <img src={Photostock} alt="PhotoStock Logo"/>
       </div>
+
+      <div className="app-navBar">
+        <NavBar/>
+      </div>
+
+
+
+      <div className="app-header">
+        <Header changeAction={changeAction}/>
+        <Route exact path="/architecture" component={Architecture}/>
+      </div>
+
+
 
       <div className="app-searchBar">
         <SearchBar
@@ -92,14 +113,15 @@ function App() {
           />
       </div>
 
-      <div className="app-main">
-        <Main images={images}/>
-      </div>
 
-      <div className="app-footer">
-        <Footer/>
-      </div>
 
+      {
+        action === "main"
+        && 
+        <div className="app-main">
+          <Main images={images}/>
+        </div>
+      }
       
     </div>
 

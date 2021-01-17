@@ -14,19 +14,27 @@
   background-color: black;
 }
 
-.app-main{
-  height: 70rem;
-  padding-top: 10rem;
-  background-color: blanchedalmond;
-  color: black;
+.new-logo {
+height: 50%;
 }
 
-.app-footer{
+.app-main{
+  /* height: 70rem; */
+  padding-top: 1rem;
+  background-color: white;
+  color: black;
+}
+ 
+.app-navBar{
   height: 10rem;
   padding-top: 7rem;
-  background-color: black;
-  color: aliceblue;
-  margin-bottom: 3rem;
+  background-color: white;
+  color: black;
+  margin-bottom: 0rem;
+}
+
+.arch-link{
+  color: white;
 }
 
 img {

@@ -1,10 +1,10 @@
 import React from 'react';
 
-function SearchBar({ handleSubmit, handleChange, searchString }) {
+    function SearchBar({ handleSubmit, handleChange, searchString }) {
 
-    return (
+        return (
 
-        <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
 
             <input placeholder="Search photos"
                    type="text"
