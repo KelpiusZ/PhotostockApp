@@ -8,7 +8,7 @@ function navBar() {
 
         <div className="navBar-container">
 
-            <h4>This is the Footer of the page</h4>
+            <h4>This is the NavBar of the page</h4>
             
             {/* <div id="ps-logo" >
                 <img src={Photostock} alt="PhotoStock Logo"/>

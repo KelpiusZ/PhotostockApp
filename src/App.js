@@ -33,7 +33,18 @@ function App() {
     endpoint: '/search'
   };
 
+
+  // const vidSearchOptions = {
+  //   key: process.env.REACT_APP_PEXELS_API_KEY,
+  //   per_page:25,
+  //   api: 'https://api.pexels.com/videos',
+  //   endpoint: '/search'
+  // };
+
+
   const [searchString, setSearchString] = useState('people');
+
+  // const [vidSearchString, setVidSearchString] = useState('travel')
 
   const [action, setAction] = useState('main');
 
@@ -41,13 +52,24 @@ function App() {
     setSearchString(event.target.value);
   }
 
+  // function vidHandleChange(event) {
+  //   setVidSearchString(event.target.value);
+  // }
+
   function handleSubmit(event) {
     event.preventDefault();
     getImages(searchString);
   }
 
+  // function vidHandleSubmit(event) {
+  //   event.preventDefault();
+  //   getVideos(vidSearchString);
+  // }
+
 
   const [images, setImages] = useState([]);
+
+  // const [videos, setVideos] = useState([]);
 
   useEffect(() => {
 
@@ -89,7 +111,7 @@ function App() {
     <div className="App"> 
 
       <div className="new-logo">
-      <img src={Photostock} alt="PhotoStock Logo"/>
+        <img src={Photostock} alt="PhotoStock Logo"/>
       </div>
 
       <div className="app-navBar">
