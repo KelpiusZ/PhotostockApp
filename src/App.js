@@ -4,8 +4,17 @@ import Header from './Components/Header';
 import SearchBar from './Components/SearchBar'
 import Main from './Components/Main';
 import NavBar from './Components/NavBar';
-import { Route, Switch } from 'react-router-dom';
-import Architecture from './Components/Architecture';
+import { Link, Redirect, Route, Switch } from 'react-router-dom';
+
+import Architecture from './Components/categories/Architecture';
+import Interiors from './Components/categories/Interiors';
+import Fashion from './Components/categories/Fashion';
+import Nature from './Components/categories/Nature';
+import Travel from './Components/categories/Travel';
+import Drinks from './Components/categories/Drinks';
+import Food from './Components/categories/Food';
+import Home from './Components/categories/Home';
+
 import Photostock from './images/PhotoStock.png'
 
 
@@ -111,7 +120,9 @@ function App() {
     <div className="App"> 
 
       <div className="new-logo">
-        <img src={Photostock} alt="PhotoStock Logo"/>
+        <Link to="/home">
+          <img src={Photostock} alt="PhotoStock Logo"/>
+        </Link>
       </div>
 
       <div className="app-navBar">
@@ -121,8 +132,16 @@ function App() {
 
 
       <div className="app-header">
+
         <Header changeAction={changeAction}/>
         <Route exact path="/architecture" component={Architecture}/>
+        <Route exact path="/interiors" component={Interiors}/>
+        <Route exact path="/fashion" component={Fashion}/>
+        <Route exact path="/nature" component={Nature}/>
+        <Route exact path="/travel" component={Travel}/>
+        <Route exact path="/drinks" component={Drinks}/>
+        <Route exact path="/food" component={Food}/>
+
       </div>
 
 
@@ -142,6 +161,8 @@ function App() {
         && 
         <div className="app-main">
           <Main images={images}/>
+          {/* <Route exact path="/home" render={() => <Redirect to="/"/> } /> */}
+          <Route exact path="/home" component={Home}/>
         </div>
       }
       

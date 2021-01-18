@@ -13,9 +13,36 @@ function Header({ changeAction }) {
             </div>
 
             <div className="navBar-container">
+
             <Link to="/architecture" onClick= {() => {changeAction('architecture')}} >
                 Architecture
             </Link> 
+
+            <Link to="/interiors" onClick= {() => {changeAction('interiors')}} >
+                Interiors
+            </Link> 
+
+            <Link to="/Fashion" onClick= {() => {changeAction('fashion')}} >
+                Fashion
+            </Link> 
+
+            <Link to="/Nature" onClick= {() => {changeAction('nature')}} >
+                Nature
+            </Link> 
+
+            <Link to="/Travel" onClick= {() => {changeAction('travel')}} >
+                Travel
+            </Link> 
+
+            <Link to="/Drinks" onClick= {() => {changeAction('drinks')}} >
+                Drinks
+            </Link> 
+
+            <Link to="/Food" onClick= {() => {changeAction('food')}} >
+                Food
+            </Link> 
+
+
             </div>
 
         </div>
