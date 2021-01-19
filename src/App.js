@@ -36,6 +36,7 @@ const archImages = [
 
 function App() {
 
+
   const searchOptions = {
     key: process.env.REACT_APP_PEXELS_API_KEY,
     per_page:25,
@@ -81,11 +82,11 @@ function App() {
 
   // const [videos, setVideos] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    getImages(searchString);
+  //   getImages(searchString);
 
-  }, []);
+  // }, []);
 
 
 
@@ -102,7 +103,7 @@ function App() {
     })
     .then(response => response.json())
     .then(response => {
-      console.log(response)
+      // console.log(response)
       setImages(response);
     })
     .catch(console.error);
@@ -120,9 +121,9 @@ function App() {
 
     <div className="App"> 
 
-      <div className="new-logo">
+      <div>
         <Link to="/home">
-          <img src={Photostock} alt="PhotoStock Logo"/>
+          <img className="new-logo" src={Photostock} alt="PhotoStock Logo"/>
         </Link>
       </div>
 
@@ -161,11 +162,14 @@ function App() {
         action === "main"
         && 
         <div className="app-main">
-          <Main images={images}/>
-          {/* <Route exact path="/home" render={() => <Redirect to="/"/> } /> */}
-          <Route exact path="/home" component={Home}/>
+
           <Route path="/details/:id" 
                  render={(routerProps) => <ImageDetails match={routerProps.match}/>}/>
+
+          {/* <Main images={images}/> */}
+          
+          <Route exact path="/home" render={() => <Home setImages={setImages} images={images}/> } />
+          
         </div>
       }
       

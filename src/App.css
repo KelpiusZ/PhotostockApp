@@ -15,7 +15,12 @@
 }
 
 .new-logo {
-height: 50%;
+width: 100px;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: flex-start;
+flex-wrap: nowrap;
 }
 
 .app-main{
@@ -26,11 +31,20 @@ height: 50%;
 }
  
 .app-navBar{
-  height: 10rem;
+  height: 1rem;
   padding-top: 7rem;
   background-color: white;
   color: black;
   margin-bottom: 0rem;
+}
+
+.navBar-container {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 .arch-link{

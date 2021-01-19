@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 
 function ImageDetails({ match }) {
 
-    const [searchString, setSearchString] = useState({})
+    const [searchString, setSearchString] = useState()
     const [images, setImages] = useState([]);
 
     useEffect (() => {
@@ -12,10 +12,10 @@ function ImageDetails({ match }) {
     }, []);
 
     function getImages(searchString) {
-
+          console.log(match.params.id)
         // const searchString = 'people'
     
-        const url = `https://api.pexels.com/v1/search?query=${searchString}/${match.params.id}&lang=en`;
+        const url = `https://api.pexels.com/v1/photos/${match.params.id}`;
     
         fetch(url, {
           headers: {
@@ -24,20 +24,22 @@ function ImageDetails({ match }) {
         })
         .then(response => response.json())
         .then(response => {
-          // console.log(response)
+          console.log(response)
           setImages(response);
         })
         .catch(console.error);
     
       };
 
-
+      if (images.length < 1) {
+        return <h2>Loading</h2>
+      }
 
     return (
 
         <div className="imageDetails">
 
-            <img src={images.src}/>
+            <img src={images.src.original}/>
 
             <div>
 

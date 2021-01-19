@@ -1,44 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+// import React from 'react';
+// import { Link } from 'react-router-dom';
 
-const Main = ({ images }) => {
-    let myphotos = images.photos
+// const Main = ({ images }) => {
+//     let myphotos = images.photos
     
-    // console.log(myphotos)
+//     // console.log(myphotos)
 
-    // if(!images.length){
-    //     { console.log(images.url)}
-    //     return <h2>Still No Images Found! bruhhhhh</h2>
-    // }
+//     // if(!images.length){
+//     //     { console.log(images.url)}
+//     //     return <h2>Still No Images Found! bruhhhhh</h2>
+//     // }
     
-    return (
+//     return (
         
-        <div className="main">
+//         <div className="main">
 
-            {/* <h3>This is the main part of the page</h3> */}
-            {/* Use the guard operator (myphotos) before mapping so you do not get an error when reloading the page. */}
-            {myphotos && images.photos.map(image =>{
+//             {/* <h3>This is the main part of the page</h3> */}
+//             {/* Use the guard operator (myphotos) before mapping so you do not get an error when reloading the page. */}
+//             {myphotos && images.photos.map(image =>{
                 
-                return (
+//                 return (
                     
-                    <Link to={`/details/:id/${images.photos.id}`}>
+//                     <Link to={`/details/:id/${images.photos.id}`}>
 
-                    <div key={image.id} className="img-results">
-                        <img src={image.src.original}/>
-                    </div>
+//                     <div key={image.id} className="img-results">
+//                         <img src={image.src.original}/>
+//                     </div>
 
-                    </Link>
+//                     </Link>
 
-                )   
+//                 )   
 
-            })}   
+//             })}   
 
-        </div>
+//         </div>
 
             
 
-    );
+//     );
 
-}
+// }
 
-export default Main; 
+// export default Main; 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
-function Home() {
+function Home({ images, setImages }) {
 
     const searchOptions = {
         key: process.env.REACT_APP_PEXELS_API_KEY,
@@ -21,7 +22,7 @@ function Home() {
     //   }
     
     
-      const [images, setImages] = useState([]);
+      // const [images, setImages] = useState([]);
     
       useEffect(() => {
     
@@ -62,13 +63,20 @@ function Home() {
                 
                 return (
                     
+                  <Link to={`/details/${image.id}`}>
+
                     <div key={image.id}>
                         <img src={image.src.original}/>
                     </div>
 
+                  </Link>
+
+
                 )   
 
-            })}            
+            })}     
+
+
             
         </div>
 
