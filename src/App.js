@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import SearchBar from './Components/SearchBar'
 import Main from './Components/Main';
 import NavBar from './Components/NavBar';
+import ImageDetails from './Components/ImageDetails'
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 
 import Architecture from './Components/categories/Architecture';
@@ -101,7 +102,7 @@ function App() {
     })
     .then(response => response.json())
     .then(response => {
-      // console.log(response)
+      console.log(response)
       setImages(response);
     })
     .catch(console.error);
@@ -163,6 +164,8 @@ function App() {
           <Main images={images}/>
           {/* <Route exact path="/home" render={() => <Redirect to="/"/> } /> */}
           <Route exact path="/home" component={Home}/>
+          <Route path="/details/:id" 
+                 render={(routerProps) => <ImageDetails match={routerProps.match}/>}/>
         </div>
       }
       

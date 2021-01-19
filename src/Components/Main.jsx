@@ -21,7 +21,7 @@ const Main = ({ images }) => {
                 
                 return (
                     
-                    <Link>
+                    <Link to={`/details/:id/${images.photos.id}`}>
 
                     <div key={image.id} className="img-results">
                         <img src={image.src.original}/>
