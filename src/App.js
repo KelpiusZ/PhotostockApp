@@ -122,7 +122,7 @@ function App() {
     <div className="App"> 
 
       <div>
-        <Link to="/home">
+        <Link to="/">
           <img className="new-logo" src={Photostock} alt="PhotoStock Logo"/>
         </Link>
       </div>
@@ -168,7 +168,7 @@ function App() {
 
           {/* <Main images={images}/> */}
           
-          <Route exact path="/home" render={() => <Home setImages={setImages} images={images}/> } />
+          <Route exact path="/" render={() => <Home setImages={setImages} images={images}/> } />
           
         </div>
       }

@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react';
+import LikeButtons from './LikeButtons';
 
 function ImageDetails({ match }) {
 
@@ -44,6 +45,8 @@ function ImageDetails({ match }) {
             <div>
 
                 <h2>Photographer: {images.photographer}</h2>
+
+                <LikeButtons/>
 
                 <h3>
                     Find more from this photograper on <a href={images.photographer_url}>Pexels</a>.
