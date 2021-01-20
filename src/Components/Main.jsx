@@ -8,16 +8,10 @@ import Nature from './categories/Nature';
 import Travel from './categories/Travel';
 import Drinks from './categories/Drinks';
 import Food from './categories/Food';
+import Home from './categories/Home';
 
-const Main = ({ Home, ImageDetails, images, setImages, changeAction }) => {
-    let myphotos = images.photos
-    
-    // console.log(myphotos)
+const Main = ({ ImageDetails, images, setImages, photos }) => {
 
-    // if(!images.length){
-    //     { console.log(images.url)}
-    //     return <h2>Still No Images Found! bruhhhhh</h2>
-    // }
     
     return (
         
@@ -26,15 +20,16 @@ const Main = ({ Home, ImageDetails, images, setImages, changeAction }) => {
             <Route path="/details/:id" 
                  render={(routerProps) => <ImageDetails match={routerProps.match}/>}/>
           
-            <Route exact path="/" render={() => <Home setImages={setImages} images={images}/> } />
+            {/* <Route exact path="/" render={() => <Home setImages={setImages} images={images} photos={photos} /> } /> */}
+            <Route exact path="/" component={Architecture}/>
 
-            <Route exact path="/architecture" component={Architecture}/>
-            <Route exact path="/interiors" component={Interiors}/>
-            <Route exact path="/fashion" component={Fashion}/>
-            <Route exact path="/nature" component={Nature}/>
-            <Route exact path="/travel" component={Travel}/>
-            <Route exact path="/drinks" component={Drinks}/>
-            <Route exact path="/food" component={Food}/>
+            <Route exact path="/Architecture" component={Architecture}/>
+            <Route exact path="/Interiors" component={Interiors}/>
+            <Route exact path="/Fashion" component={Fashion}/>
+            <Route exact path="/Nature" component={Nature}/>
+            <Route exact path="/Travel" component={Travel}/>
+            <Route exact path="/Drinks" component={Drinks}/>
+            <Route exact path="/Food" component={Food}/>
 
 
         </div>

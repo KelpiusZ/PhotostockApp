@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Header({ changeAction }) {
+function Header({ }) {
 
     return (
 
@@ -15,31 +15,31 @@ function Header({ changeAction }) {
 
             <div className="navBar-container">
 
-                <Link to="/architecture" onClick= {() => {changeAction('architecture')}} >
+                <Link to="/Architecture">
                     Architecture
                 </Link> 
 
-                <Link to="/interiors" onClick= {() => {changeAction('interiors')}} >
+                <Link to="/Interiors">
                     Interiors
                 </Link> 
 
-                <Link to="/Fashion" onClick= {() => {changeAction('fashion')}} >
+                <Link to="/Fashion">
                     Fashion
                 </Link> 
 
-                <Link to="/Nature" onClick= {() => {changeAction('nature')}} >
+                <Link to="/Nature">
                     Nature
                 </Link> 
 
-                <Link to="/Travel" onClick= {() => {changeAction('travel')}} >
+                <Link to="/Travel">
                     Travel
                 </Link> 
 
-                <Link to="/Drinks" onClick= {() => {changeAction('drinks')}} >
+                <Link to="/Drinks">
                     Drinks
                 </Link> 
 
-                <Link to="/Food" onClick= {() => {changeAction('food')}} >
+                <Link to="/Food">
                     Food
                 </Link> 
 

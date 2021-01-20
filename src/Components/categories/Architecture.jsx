@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
  
 function Architecture() {
@@ -63,9 +64,11 @@ function Architecture() {
                 
                 return (
                     
+                  <Link to={`/details/${image.id}`}>
                     <div key={image.id}>
                         <img src={image.src.original}/>
                     </div>
+                  </Link>
 
                 )   
 

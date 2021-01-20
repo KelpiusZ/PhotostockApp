@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
+import { React, useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 
-function Home({ images, setImages }) {
+function Home({ images, setImages}) {
 
     const searchOptions = {
         key: process.env.REACT_APP_PEXELS_API_KEY,
@@ -50,7 +50,7 @@ function Home({ images, setImages }) {
     
       };
 
-    let homePhotos = images.photos
+   
 
 
     return (
@@ -58,8 +58,7 @@ function Home({ images, setImages }) {
 
         <div className="arch-link">
 
-            {/* <button onClick={() => {changeAction('main')}}>Back</button> */}
-            {homePhotos && images.photos.map(image =>{
+            {images.photos && images.photos.map(image =>{
                 
                 return (
                     

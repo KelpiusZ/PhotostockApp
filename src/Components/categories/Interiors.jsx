@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Interiors() {
 
@@ -42,7 +43,7 @@ function Interiors() {
         })
         .then(response => response.json())
         .then(response => {
-          console.log(response)
+          // console.log(response)
           setImages(response);
         })
         .catch(console.error);
@@ -62,9 +63,11 @@ function Interiors() {
                 
                 return (
                     
+                  <Link to={`/details/${image.id}`}>
                     <div key={image.id}>
                         <img src={image.src.original}/>
                     </div>
+                  </Link>
 
                 )   
 

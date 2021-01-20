@@ -121,18 +121,12 @@ function App() {
         </Link>
       </div>
 
-      <div className="app-navBar">
-        <NavBar/>
-      </div>
-
-
 
       <div className="app-header">
 
         <Header/>
 
       </div>
-
 
 
       <div className="app-searchBar">
@@ -143,20 +137,13 @@ function App() {
           />
       </div>
 
+    
+      <div className="app-main">
 
+        <Main ImageDetails={ImageDetails} />
 
-      {
-        action === "main"
-        && 
-        <div className="app-main">
-
-          
-          
-          <Main  changeAction={changeAction}/>
-
-
-        </div>
-      }
+      </div>
+      
       
     </div>
 
