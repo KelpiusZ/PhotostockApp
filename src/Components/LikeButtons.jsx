@@ -10,8 +10,8 @@ const LikeButtons = () => {
 
             <p>{likeButtons} &hearts;</p>
 
-            <button onClick= {() => setLikeButtons(likeButtons + 1)} className='increment'>&#10084;&#65039; + </button>
-            <button onClick= {() => {if (likeButtons > 0) {setLikeButtons(likeButtons - 1)}}} className='decrement'>&#128148; - </button>
+            <button onClick= {() => setLikeButtons(likeButtons + 1)} className='increment'>&#10084;&#65039;</button>
+            <button onClick= {() => {if (likeButtons > 0) {setLikeButtons(likeButtons - 1)}}} className='decrement'>&#128148;</button>
 
         </div>
 

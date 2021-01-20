@@ -1,44 +1,48 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
+import React from 'react';
+import { Route } from 'react-router-dom';
 
-// const Main = ({ images }) => {
-//     let myphotos = images.photos
-    
-//     // console.log(myphotos)
+import Architecture from './categories/Architecture';
+import Interiors from './categories/Interiors';
+import Fashion from './categories/Fashion';
+import Nature from './categories/Nature';
+import Travel from './categories/Travel';
+import Drinks from './categories/Drinks';
+import Food from './categories/Food';
 
-//     // if(!images.length){
-//     //     { console.log(images.url)}
-//     //     return <h2>Still No Images Found! bruhhhhh</h2>
-//     // }
+const Main = ({ Home, ImageDetails, images, setImages, changeAction }) => {
+    let myphotos = images.photos
     
-//     return (
+    // console.log(myphotos)
+
+    // if(!images.length){
+    //     { console.log(images.url)}
+    //     return <h2>Still No Images Found! bruhhhhh</h2>
+    // }
+    
+    return (
         
-//         <div className="main">
+        <div className="main">
 
-//             {/* <h3>This is the main part of the page</h3> */}
-//             {/* Use the guard operator (myphotos) before mapping so you do not get an error when reloading the page. */}
-//             {myphotos && images.photos.map(image =>{
-                
-//                 return (
-                    
-//                     <Link to={`/details/:id/${images.photos.id}`}>
+            <Route path="/details/:id" 
+                 render={(routerProps) => <ImageDetails match={routerProps.match}/>}/>
+          
+            <Route exact path="/" render={() => <Home setImages={setImages} images={images}/> } />
 
-//                     <div key={image.id} className="img-results">
-//                         <img src={image.src.original}/>
-//                     </div>
+            <Route exact path="/architecture" component={Architecture}/>
+            <Route exact path="/interiors" component={Interiors}/>
+            <Route exact path="/fashion" component={Fashion}/>
+            <Route exact path="/nature" component={Nature}/>
+            <Route exact path="/travel" component={Travel}/>
+            <Route exact path="/drinks" component={Drinks}/>
+            <Route exact path="/food" component={Food}/>
 
-//                     </Link>
 
-//                 )   
+        </div>
 
-//             })}   
+                   
 
-//         </div>
+    );
 
-            
+}
 
-//     );
-
-// }
-
-// export default Main; 
+export default Main; 

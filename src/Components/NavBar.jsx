@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Photostock from '../images/PhotoStock.png'
 
 function navBar({ changeAction }) {
 
