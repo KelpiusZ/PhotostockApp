@@ -1,6 +1,6 @@
 # Kelpius Zannou
 ## PhotoStock Application
-
+![Take a picture](https://media.giphy.com/media/dZQr7GD78TTD2ocdl0/giphy.gif)
 ### Project Description
 Welcome to PhotoStock!
 PhotoStock is an application dedicated to sharing stock photography. PhotoStock is powered by a community of photographers from Pexels, who provide you with the best free high resolution photos. So if you're looking for a great background image for a project, or simply thinking of updating your phone's background image, PhotoStock is the application you have been waiting for. 
