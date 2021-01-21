@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Kelpius Zannou
+## PhotoStock Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description
+Welcome to PhotoStock!
+PhotoStock is an application dedicated to sharing stock photography. PhotoStock is powered by a community of photographers from Pexels, who provide you with the best free high resolution photos. So if you're looking for a great background image for a project, or simply thinking of updating your phone's background image, PhotoStock is the application you have been waiting for. 
 
-## Available Scripts
 
-In the project directory, you can run:
+### Landing Page
+![Landing page](https://imgur.com/viIhIte.png/)
 
-### `npm start`
+### Wire Frames
+![Wrireframe for Components hierarchy](https://imgur.com/9MCAUXI.png)
+The image above illustrates the hierachy for the components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Landing Page](https://imgur.com/C9UlXkA.png)
+The image above is a representation of the initial design for the landing page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Image Details Page](https://imgur.com/lFfG9DF.png)
+The image above illustrates the initial design for the details page to each image once selected.
 
-### `npm test`
+### List of Technologies Used
+* HTML
+* CSS
+* React - JavaScript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### User Stories
+The ideal user is someone who is interested in photography or simply needs to update the background on any of their devices. The user will be able to utilize the search bar to find the photo that suits their needs. The user can also select from various categories listed in the header of the app to quickly find images as they relate to selected category. Once the user finds any image they find interesting, upon selecting that image, they will be redirected to a new page showing the photographer of the image. Once teh user has selcted an image they will also find a link leading to the photographer's account account on Pexels, where they will be able to browse for more related images.
