@@ -11,6 +11,7 @@ PhotoStock is an application dedicated to sharing stock photography. PhotoStock 
 
 ### Wire Frames
 ![Wrireframe for Components hierarchy](https://imgur.com/9MCAUXI.png)
+
 The image above illustrates the hierachy for the components.
 
 ![Landing Page](https://imgur.com/C9UlXkA.png)
