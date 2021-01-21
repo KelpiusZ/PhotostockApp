@@ -9,6 +9,9 @@ PhotoStock is an application dedicated to sharing stock photography. PhotoStock 
 ### Landing Page
 ![Landing page](https://imgur.com/viIhIte.png/)
 
+### Image Details Page
+![Image Details Page](https://imgur.com/51EvAAf.png)
+
 ### Wire Frames
 ![Wrireframe for Components hierarchy](https://imgur.com/9MCAUXI.png)
 
